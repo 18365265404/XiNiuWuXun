@@ -22,7 +22,7 @@
               <li @click="sort('all',sortUp,0)" :class="{'sort-active': sortActive==0}"><span>综合</span></li>
               <li @click="sort('price',sortUp,1)" :class="{'sort-active': sortActive==1}"><span>价格</span><Icon class="sort-icon" :type="ifPriceUp ? 'md-arrow-round-up' : 'md-arrow-round-down'"  /></li>
           </ul>
-            <Input class="searchInput" @on-search='searchAll()' v-model="likeName" search enter-button placeholder="请输入..." />
+        <Input class="searchInput" @on-search='searchAll()' v-model="likeName" search enter-button placeholder="请输入..." />
             
           
           <div class="layout shop">
@@ -306,7 +306,7 @@ computed:{
 methods:{
     // 搜索
     searchAll(){
-        alert
+
         this.itemList=[]
         this.initData(this.tableData)
     },
@@ -535,7 +535,7 @@ mounted() {
 .searchInput{
     width: 300px;
     position: absolute;
-    right: 0;
+    right: 800px;
     top: 15px;
 }
 .shop-center{

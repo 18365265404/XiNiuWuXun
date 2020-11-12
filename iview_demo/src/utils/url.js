@@ -1,15 +1,14 @@
 // 接口汇总
 //服务器地址
-// const server = 'http://47.100.237.163:8097/'; //正式地址
-// const server = 'http://ytz4sp.natappfree.cc/'; //汪老师地址
-const server = 'http://192.168.1.98:8080/'; //正式地址
 
+// const server = 'http://192.168.1.98:8100/'; //测式地址
+const server = 'http://47.100.237.163:8100/'; //正式地址
 
 
 
 // 七牛
-// const qiniuH='http://img.centrino1.com/'//正式地址
-const qiniuH='http://test.huashenghl.com/'//测式地址
+const qiniuH='http://img.xiniuwuxun.com/'//正式地址
+// const qiniuH='http://test.huashenghl.com/'//测式地址
 
 
 // 获取验证码

@@ -5,27 +5,19 @@ import Person from '@/components/person/person.vue'
 
 
 Vue.use(Router)
-const originalPush = Router.prototype.push;
+// const originalPush = Router.prototype.push;
 
-Router.prototype.push = function push(location) {
+// Router.prototype.push = function push(location) {
 
-  return originalPush.call(this, location).catch(err => err);
+//   return originalPush.call(this, location).catch(err => err);
 
-};
+// };
 export default [
-    // {
-    //   path: '/login',
-    //   name: 'login',
-    //   meta: {
-    //     title: 'Login - 登录',
-    //     hideInMenu: true
-    //   },
-    //   component: () => import('@/components/login/login.vue')
-    // },
+
     
     {
-      path: '/',
-      name: '_home',
+      path: '*',
+      name: 'home',
       redirect: '/home',
       component: Main,
       meta: {
@@ -333,22 +325,22 @@ export default [
       ]
     },
     {
-        path: '/401',
-        name: 'error_401',
-        meta: {
-          hideInMenu: true
-        },
-        component: () => import('@/components/error-page/401.vue')
+      path: '/401',
+      name: 'error_401',
+      meta: {
+        hideInMenu: true
       },
+      component: () => import('@/components/error-page/401.vue')
+    },
 
-      {
-        path: '*',
-        name: 'error_404',
-        meta: {
-          hideInMenu: true
-        },
-        component: () => import('@/components/error-page/404.vue')
-      }
+    {
+      path: '*',
+      name: 'error_404',
+      meta: {
+        hideInMenu: true
+      },
+      component: () => import('@/components/error-page/404.vue')
+    }
 
 
 

@@ -11,7 +11,7 @@ const { homeName } = config
 Vue.use(Router)
 const router = new Router({
   routes,
-  mode: 'history'
+  // mode: 'history'
 })
 const LOGIN_PAGE_NAME = 'login'
 
@@ -24,7 +24,7 @@ const LOGIN_PAGE_NAME = 'login'
 router.beforeEach((to,from,next)=>{
   let userPath = to.meta.type
   let userId = session_storage.storageGet('userData') ? session_storage.storageGet('userData').userId : false
-  console.log('from.path',from.path)
+  // console.log('from.path',from.path)
   if(userPath=='user'){  //需登录的页面，需要登录后才可以跳转
     if(userId){ //确定已登录
       next();
